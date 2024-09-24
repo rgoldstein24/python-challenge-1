@@ -50,15 +50,16 @@ while place_order:
     # Check to continue order
     while True:
         continue_ordering = input("Would you like to keep ordering? (y/n)").lower()
-        if continue_ordering == 'y':
-            print("We will keep ordering.")
-            break
-        elif continue_ordering == 'n':
-            print("Thank you for ordering.")
-            place_order = False
-            break
-        else:
-            print("Invalid input. Please enter 'y' for yes or 'n' for no.")
+        match continue_ordering:
+            case'y':
+                print("We will keep ordering.")
+                break
+            case 'n':
+                print("Thank you for ordering.")
+                place_order = False
+                break
+            case _:
+                print("Invalid input. Please enter 'y' for yes or 'n' for no.")
 
 # Print receipt
 print("Item name                 | Price  | Quantity")
