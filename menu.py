@@ -83,7 +83,4 @@ total_price = sum(order["Price per item"] * order["Quantity"] for order in custo
 
 # Display the total price to the customer
 print(f"Total Price: ${total_price:.2f}")  
-print(f"Enjoy your meal!")          
-            
-        
-
+print(f"Enjoy your meal!")
